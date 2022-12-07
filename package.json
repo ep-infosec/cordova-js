@@ -1,0 +1,39 @@
+{
+  "author": "Apache Software Foundation",
+  "name": "cordova-js",
+  "description": "Cordova JavaScript: a unified JavaScript layer for the Cordova suite of projects enabling cross-platform native mobile development of applications using HTML, CSS and JavaScript.",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "version": "7.0.0-dev",
+  "repository": "github:apache/cordova-js",
+  "bugs": "https://github.com/apache/cordova-js/issues",
+  "bin": "build-tools/cli.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "pretest": "npm run build:test",
+    "test": "npm run lint && karma start",
+    "build": "grunt compile",
+    "build:test": "node build-tools/test-build pkg/cordova.test.js"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "execa": "^5.1.1",
+    "fs-extra": "^9.1.0",
+    "globby": "^11.0.4"
+  },
+  "devDependencies": {
+    "@cordova/eslint-config": "^4.0.0",
+    "cordova-android": "^9.1.0",
+    "cordova-ios": "^5.1.1",
+    "eslint-plugin-es5": "^1.5.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-clean": "^2.0.0",
+    "jasmine-core": "^3.8.0",
+    "karma": "^6.3.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-jasmine": "^4.0.1",
+    "puppeteer": "^10.1.0"
+  }
+}
